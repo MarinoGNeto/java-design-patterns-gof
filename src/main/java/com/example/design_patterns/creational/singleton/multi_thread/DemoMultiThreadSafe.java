@@ -1,6 +1,9 @@
 package com.example.design_patterns.creational.singleton.multi_thread;
 
-
+/**
+ * Demo class Singleton:
+ * Singleton is a creational design pattern that allows you to guarantee that a class has only one instance, while providing a global access point for that instance.
+ */
 public class DemoMultiThreadSafe {
     public static void main(String[] args) {
         System.out.println("Caso apareça 2 valores diferentes, então foram criados 2 instancias diferentes e isso não deveria ocorrer," +

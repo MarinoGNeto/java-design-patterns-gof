@@ -1,13 +1,13 @@
 package com.example.design_patterns.creational.singleton.single_thread;
 
 /**
- * Esta classe tem intuito de falhar para exemplificar que é necessário usar threadSafe em casos de multithread.
+ * This class is intended to fail to exemplify that it is necessary to use threadSafe in multithreaded cases.
  */
 public class DemoMultiThreadNonSafe {
     public static void main(String[] args) {
-        System.out.println("Caso apareça 2 valores diferentes, então foram criados 2 instancias diferentes e isso não deveria ocorrer," +
-                " visto que singleton permite apenas 1 instância. \n" +
-                        "Resultado: \n");
+        System.out.println("If 2 different values appear, then 2 different instances were created and this should not happen" +
+                " since Singleton only allows 1 instance. \n" +
+                "Result: \n");
 
         Thread threadSqlServer = new Thread(new ThreadSqlServer());
         Thread threadMongoDb = new Thread(new ThreadMongoDb());

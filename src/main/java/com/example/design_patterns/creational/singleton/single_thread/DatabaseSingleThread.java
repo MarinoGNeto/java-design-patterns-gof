@@ -1,8 +1,8 @@
 package com.example.design_patterns.creational.singleton.single_thread;
 
 /**
- * Este exemplo com lazy inicialization serve para thread única apenas
- * Desta maneira não funciona com Multithread conforme exemplo em DemoMultiThreadNonSafe
+ * This example with lazy initialization is for single thread only.
+ * This way does not work with Multithread as shown in DemoMultiThreadNonSafe
  */
 public class DatabaseSingleThread {
 

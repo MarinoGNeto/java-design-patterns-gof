@@ -1,14 +1,11 @@
 package com.example.design_patterns.creational.singleton.multi_thread;
 
 /**
- * Este exemplo com sincronização serve para
- * Singleton seguro para threads com lazy inicialization
+ * This example with synchronization is for
+ * Thread-safe singleton with lazy initialization
  */
 public class DatabaseMultiThread {
 
-    /**
-     * O campo deve ser declarado como volatile para o double check lock funcionar corretamente.
-     */
     private static DatabaseMultiThread databaseInstance;
     private String url;
 

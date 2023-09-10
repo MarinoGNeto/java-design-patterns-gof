@@ -1,7 +1,8 @@
 package com.example.design_patterns.creational.factory;
 
 /**
- * Demo class
+ * Demo class Factory Method:
+ * The Factory Method is a creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to change the type of objects that are created.
  */
 public class Demo {
 
