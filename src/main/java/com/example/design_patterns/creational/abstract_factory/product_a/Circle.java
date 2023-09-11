@@ -1,4 +1,4 @@
-package com.example.design_patterns.creational.abstract_factory.product;
+package com.example.design_patterns.creational.abstract_factory.product_a;
 
 /**
  * Concrete Product A

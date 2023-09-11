@@ -9,7 +9,7 @@ import com.example.design_patterns.creational.factory.product.Shape;
 public class RectangleFactory extends ShapeFactory {
 
     @Override
-    public Shape createShape() {
+    protected Shape createShape() {
         return new Rectangle();
     }
 }

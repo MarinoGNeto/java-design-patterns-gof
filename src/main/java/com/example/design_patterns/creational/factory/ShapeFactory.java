@@ -13,5 +13,5 @@ public abstract class ShapeFactory {
         shape.draw();
     }
 
-    public abstract Shape createShape();
+    protected abstract Shape createShape();
 }
