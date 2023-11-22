@@ -25,6 +25,6 @@ public class Demo {
         MathOperationStrategy multiplicationOperation = new MultiplicationOperationStrategy();
         mathContext.setMathOperationStrategy(multiplicationOperation);
 
-        System.out.println("Addition result: " + mathContext.executeOperation(10, 5));
+        System.out.println("Multiplication result: " + mathContext.executeOperation(10, 5));
     }
 }
