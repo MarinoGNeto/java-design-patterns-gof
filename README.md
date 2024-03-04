@@ -55,14 +55,24 @@ The patterns are flexible and lets you link the handlers into one big chain, ask
 
 ---
 
-The Strategy pattern defines a family of algorithms, encapsulates each one of them, and makes them interchangeable. This allows the algorithm to vary independently of the clients that use it.
+Strategy is a behavioral design pattern that define a family of algorithms, encapsulates each one of them, and makes them interchangeable. This allows the algorithm to vary independently of the clients that use it.
+
+**Applicability**
+- When you want to use different variants of an algorithm within an object and be able to switch between them during runtime. The Strategy pattern lets you indirectly alter the object's behavior at runtime by associating it wht different sub-objects which can perform things in different ways.
+- When you have similar classes that only differ in the way they execute some behavior, this also reduces duplicate code.
+- When you need to isolate the business logic of a class from the implementation details of algorithms that may not be as important in the context. The Strategy pattern lets you isolate the code, internal data, and dependencies from the rest of the code. The client can just get a simple interface to execute the algorithms and switch them at runtime.
+- When you have a massive conditional statement that switches between the variants of the same algorithm. Instead of implementing all variants of the algorithm, the original object can just delegate execution to one of the classes that implement the original.
 
 **Pros:**
-- Promotes flexibility by allowing the algorithm to vary independently of the client.
-- Facilitates the addition of new algorithms without modifying existing code.
+- Promotes flexibility by allowing to swap algorithms used inside an object at runtime.
+- Facilitates the addition of new algorithms without modifying existing code and context - Open/Closed Principle.
+- Allow to isolate the implementation details of an algorithm from the code that uses it.
+- Can replace inheritance with composition.
 
 **Cons:**
 - Can increase code complexity by introducing multiple classes.
+- Clients must be aware of the differences between strategies to be able to select a proper one.
+- A lot of modern programming languages have functional type support that lets you implement different versions of an algorithm inside a set of anonymous functions. Then you could use these functions exactly as you’d have used the strategy objects, but without bloating your code with extra classes and interfaces.
 
 ## Abstract Factory
 
