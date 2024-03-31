@@ -78,14 +78,20 @@ Strategy is a behavioral design pattern that define a family of algorithms, enca
 
 ---
 
-The Abstract Factory pattern provides an interface for creating families of related or dependent objects without specifying their concrete classes.
+The Abstract Factory pattern is a creational design pattern that provides an interface for creating families of related or dependent objects without specifying their concrete classes.
+
+**Applicability**
+- When needs to work with various families of related products, but without depend on the concrete classes of those products. The Abstract Factory provides you with an interface for creating objects from each class of the product family. Creating with the interface, don't need to worry about creating the wrong variant of a product which does not match the products already created.
+- When you have a class with a set of Factory Methods that blur its primary responsability. Considering Single Responsibility Principle, when a class deals with multiple product types, it is worth extracting its factory methods into a stand-alone factory class or a full-blown Abstract Factory implementation.
 
 **Pros:**
 - Promotes encapsulation of the object creation process.
 - Facilitates the substitution of entire families of products.
+- Allow to extract the product creation code into one place, making easier to support the code. - Single Responsibility Principle.
+- Possibility to create new product variants without breaking existing client code - Open/Closed Principle.
 
 **Cons:**
-- Can be difficult to extend to support new types of products.
+- Code may become more complex than it should be, since a lot of new interfaces and classes are introduced along with the pattern.
 
 ## Factory
 
