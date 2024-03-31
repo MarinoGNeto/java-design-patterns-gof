@@ -138,9 +138,11 @@ The Singleton pattern ensures that a class has only one instance and provides a 
 
 The Adapter pattern converts the interface of a class into another interface that the client expects to find. It allows classes with incompatible interfaces to work together.
 
+**Applicability**
+- When you want to use some existing class, but its interface is not compatible with the rest of your code. The Adapter pattern lets you create a middle-layer class that serves as a translator between your code and a legacy class, a 3rd-party class or any other class with a weird interface.
+
 **Pros:**
-- Enables interoperability between classes with incompatible interfaces.
-- Helps maintain code cohesion by avoiding changes to existing classes.
+- Helps maintain code cohesion by avoiding changes to existing classes and introduce new types of adapters without break the existing classes - Open/Closed Principle.
 
 **Cons:**
 - Can lead to additional complexity by introducing extra adapters.
