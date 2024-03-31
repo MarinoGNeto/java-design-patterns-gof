@@ -99,9 +99,13 @@ The Abstract Factory pattern is a creational design pattern that provides an int
 
 The Factory pattern allows the creation of objects without specifying the exact class of object that will be created. It provides an interface to create objects in a superclass but allows subclasses to alter the type of objects that will be created.
 
+**Applicability**
+- When you don't now yet the exact types and dependencies of the objects your code should work with. The Factory pattern separates product construction code from the code that actually uses the product.
+- When you want to save system resources by reusing existing objects instead of rebuilding them each time.
+
 **Pros:**
-- Promotes encapsulation of object creation.
-- Facilitates the addition of new types of objects without modifying existing code.
+- Facilitates the addition of new types of objects without modifying existing code - Open/Closed Principle.
+- Easier to support, because you can move the product cration code into one specific place in the code - Single Responsibility Principle.
 
 **Cons:**
 - Can lead to a complicated class hierarchy.
