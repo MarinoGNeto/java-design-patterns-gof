@@ -100,7 +100,7 @@ The Abstract Factory pattern is a creational design pattern that provides an int
 The Factory pattern allows the creation of objects without specifying the exact class of object that will be created. It provides an interface to create objects in a superclass but allows subclasses to alter the type of objects that will be created.
 
 **Applicability**
-- When you don't now yet the exact types and dependencies of the objects your code should work with. The Factory pattern separates product construction code from the code that actually uses the product.
+- When you don't know yet the exact types and dependencies of the objects your code should work with. The Factory pattern separates product construction code from the code that actually uses the product.
 - When you want to save system resources by reusing existing objects instead of rebuilding them each time.
 
 **Pros:**
@@ -116,13 +116,21 @@ The Factory pattern allows the creation of objects without specifying the exact 
 
 The Singleton pattern ensures that a class has only one instance and provides a global point of access to that instance.
 
+**Applicability**
+- When a class should have just a single instance available to all clients. Singleton pattern disables all other means of creating objects of a class except for the special creation method. This method either creats a new object or returns an existing one if it has already been created.
+- When you need stricter control over global variables. Unlike global variables, Singleton pattern guarantees that there is just one instance of a class. Nothing except the Singleton class itself with the body of getInstance() method can replace the cached instance.
+
 **Pros:**
 - Ensures that a single instance of the class is shared globally.
 - Provides a global access point for the unique instance.
+- The singleton object is initialized only when it is requested for the first time.
 
 **Cons:**
-- Can make unit testing difficult due to dependence on the global instance.
+- Can make unit testing difficult due to dependence on the global instance and since the constructor of the singleton class is private and overriding static methods is impossible in most languages, mock the singleton can be really hard or impossible.
 - Can be difficult to extend or modify to support multiple instances.
+- Violates the Single Responsibility Principle. The pattern solves two problems at the time.
+- Can mask bad design, for instance, when the components of the program know too much about each other.
+- Requires special treatment in multithreaded environment so that multiple threads won't create a singleton object several times.
 
 ## Adapter
 
